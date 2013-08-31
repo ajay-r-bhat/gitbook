@@ -42,7 +42,40 @@
     So, we rewind the master and get rid of these commits and switch/checkout to the relevant branch and keep working.
     
 
- 2. A commit by 2 authors
+ 4. Reset an already added file
+    
+    ```git reset -- filename.extension```
+    
+    ```git commit -m "commit message"```
+
+    ```git add filename.extension```
+    
+ 5. Undo a merge/pull in a dirty working tree
+    
+    ```
+       git pull
+
+       Auto-merging <branch>
+       
+       Merge made by recursive.
+       
+        <branch>          | 10 ++++----
+    
+    ```
+    
+    ```git reset --merge ORIG_HEAD```
+    
+      
+      After looking at merge, you may decide that the changes are not correct. Running ```git reset --hard HEAD``` will let
+      
+      you go back to HEAD, discarding your local changes. In order to keep the local changes you can just do
+      
+      ```git reset --merge ORIG_HEAD```
+      
+      
+ 6. A commit by 2 authors
 
 		To add two authors for a single commit use the following commands
+		
+	  ```git --amend --reset-author```
 
