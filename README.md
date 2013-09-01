@@ -79,3 +79,22 @@
 		
 	  ```git --amend --reset-author```
 
+ 7. Add all files with a specific extension to git
+ 
+    ```git add *.txt```
+
+    This will add all ```.txt``` files to the git repository.
+    
+   Add all files from a specific subdirectory
+   
+   ```git add docs/*.txt```
+   
+ 8. Remove files from git that have been deleted from filesystem.
+    
+    ```gir rm <file>.<extension>```
+
+ 9. Merge a branch called feature into current branch but do not make commits automatically
+ 
+    ```git merge --no-commit feature```
+
+    This is helpful when you want to include further changes to the merge. Tyically useful when bumping version/release numbers.
