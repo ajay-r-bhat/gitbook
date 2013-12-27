@@ -14,7 +14,7 @@
  1. Change the last commit / Undo a commit, make a change and redo
 
     The last commit can be changed by the following commands
-    ```git reset --soft HEAD^```
+    ```git reset --soft HEAD~```
 
     ```git add <files>```
 
